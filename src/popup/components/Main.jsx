@@ -1,4 +1,3 @@
-// import React from 'react';
 import icon from '../../assets/logo.png';
 
 const Main = () => {
@@ -7,7 +6,6 @@ const Main = () => {
     <div>
       <p>Hello, philosopher!</p>
       <img src={icon} alt="extension icon" />
-
     </div >
   )
 }
