@@ -6,12 +6,13 @@ function getHighlightedText() {
 
 chrome.runtime.onMessage.addListener(
   function (request, _sender, sendResponse) {
-    console.log({ request })
+
     // Add message listeners
     if (request["type"] === 'GET_SELECTED') {
       const highlightedText = getHighlightedText()
       sendResponse(highlightedText);
     }
+
     return true; // this make sure sendResponse will work asynchronously
   }
 );

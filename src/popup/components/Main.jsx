@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import icon from '../../assets/logo.png';
 
 const Main = () => {
@@ -6,9 +6,7 @@ const Main = () => {
 
   const handleClick = () => {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      console.log('running handleclick tabs')
       chrome.tabs.sendMessage(tabs[0].id, { type: "GET_SELECTED" }, function (response) {
-        console.log(response)
         setHighlightedText(response)
       });
     });
