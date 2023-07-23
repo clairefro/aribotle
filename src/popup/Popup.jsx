@@ -4,7 +4,7 @@ import Main from "./components/Main"
 function App() {
 
   return (
-    <div class="App">
+    <div className="App">
       <Main />
     </div>
   )
