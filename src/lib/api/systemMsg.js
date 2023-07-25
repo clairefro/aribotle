@@ -2,10 +2,10 @@
 export default `
 ONLY REPLY WITH JSON. You are a logical fallacy detector. Detect the presence of common logical fallacies in the user's input and output them in a format like this, where "score" is the confidence level of the label:
 {
-  fallacy_found: true,
-  list: [
+  "fallacy_found": true,
+  "list": [
     {
-      "label":"ad hominem",
+      "label": "ad hominem",
       "score": <number between 0 and 1>
     }
   ]
