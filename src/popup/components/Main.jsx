@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import icon from '../../assets/logo.png';
 import ApiKeyControls from './ApiKey/ApiKeyControls';
-import { shh } from '../../lib/shh'
+import { shh } from '../../lib/shh/shh'
 import { getStorageValue, setStorageValue } from '../../lib/chrome/storage'
 import constants from '../../lib/constants'
 
