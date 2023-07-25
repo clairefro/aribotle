@@ -1,15 +1,10 @@
 
 const SHOW_LAST = 4
-const MASK_SYMBOL = "*"
+const MASK = " ... "
 
 const mask = (text) => {
-  const len = text.length - SHOW_LAST;
-  let str = text.split('');
-  for (var i = 0; i < len; i++) {
-    str[i] = MASK_SYMBOL;
-  }
-  str = str.join('');
-  return str;
+  let masked = [text.slice(0, 3), MASK, text.slice(-1 * SHOW_LAST)].join('')
+  return masked;
 }
 
 export { mask }

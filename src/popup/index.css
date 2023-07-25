@@ -39,7 +39,6 @@ code {
   top: 0;
   left: 0;
   height: 100%;
-  background-color: rgba(255, 0, 0, 0.4);
   /* animation: progress-bar-animation 1000ms linear infinite; */
 }
 

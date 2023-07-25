@@ -6,6 +6,7 @@ const ProgressBar = ({ fraction }) => {
       <div className="progress-bar-indicator"
         style={{
           width: percent + "%",
+          backgroundColor: percent > 30 ? `rgba(255, 0, 0, 0.4)` : `rgba(255, 255, 0, 0.4)`
         }}>
         <span>
           {percent}%
