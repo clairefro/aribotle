@@ -44,10 +44,10 @@ const Main = () => {
 
   return (
     <div>
-      <p>Hello, philosopher!</p>
+      <h1>Aribotle</h1>
       <img src={icon} alt="extension icon" />
       <div>
-        <h1>Highlighted Text</h1>
+
         {highlightedText?.length ? <p>"{highlightedText}"</p> : <p>Highlight text in the webpage to start</p>}
 
       </div>
