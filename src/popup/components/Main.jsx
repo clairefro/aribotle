@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import icon from '../../assets/logo.png';
 import ApiKeyControls from './ApiKey/ApiKeyControls';
+import FallacyCheck from './FallacyCheck/FallacyCheck';
 import { shh } from '../../lib/shh/shh'
 import { getStorageValue, setStorageValue } from '../../lib/chrome/storage'
 import constants from '../../lib/constants'
@@ -51,6 +52,7 @@ const Main = () => {
 
       </div>
       <ApiKeyControls apiKey={apiKey} setApiKey={setApiKey} />
+      <FallacyCheck apiKey={apiKey} prompt={highlightedText} />
     </div >
   )
 }

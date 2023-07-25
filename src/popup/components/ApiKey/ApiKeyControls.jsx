@@ -11,7 +11,7 @@ const ApiKeyControls = ({ setApiKey, apiKey }) => {
   }
 
   const handleSave = () => {
-    setApiKey(shh.e(input))
+    setApiKey(input)
   }
 
   const handleInputChange = (e) => {
@@ -20,11 +20,10 @@ const ApiKeyControls = ({ setApiKey, apiKey }) => {
 
   return (
     <div className="api-key-controls">
-
       <button onClick={handleOpen}>ApiKey settings</button>
       {open && (
         <div>
-          {apiKey && (<p>Current: {mask(shh.d(apiKey))}</p>)}
+          {apiKey && (<p>Current: {mask(apiKey)}</p>)}
           < input onChange={handleInputChange} placeholder="Paste your API Key" type="text" />
           <button onClick={handleSave}>Save</button>
         </div>
