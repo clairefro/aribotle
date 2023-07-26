@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { openaiClient } from "../../../lib/api/openai";
 import { isValidResponse } from "../../../lib/validation/isValidResponse";
 import BoxOfShame from "./BoxOfShame/BoxOfShame";
@@ -6,14 +6,22 @@ import Spinner from "../blocks/Spinner";
 
 const INVALID = "INVALID"
 
-const FallacyCheck = ({ apiKey, prompt }) => {
+const FallacyCheck = ({ apiKey, prompt, setMood }) => {
   const [result, setResult] = useState("")
   const [fetching, setFetching] = useState(false)
 
+  useEffect(() => {
+    if (result) {
+      setMood(result.fallacy_found ? 'angry' : 'pleased')
+    }
+  }, [result])
+
   const handleClick = async () => {
     try {
+      setMood(null)
       setFetching(true)
       const res = await openaiClient.chat(apiKey, prompt)
+
       if (res && isValidResponse(res)) {
         const resJson = JSON.parse(res)
         setResult(resJson)
@@ -39,7 +47,9 @@ const FallacyCheck = ({ apiKey, prompt }) => {
       )
     } else if (result.fallacy_found) {
       return (
-        <h2 className="fallacy-status-found">FALLACY!!!!</h2>
+        <>
+          <h2 className="fallacy-status-found">FALLACY!!!!</h2>
+        </>
       )
     }
     return (
@@ -61,7 +71,7 @@ const FallacyCheck = ({ apiKey, prompt }) => {
         <button
           className="button-cta"
           onClick={handleClick}
-          disabled={fetching}
+          disabled={fetching || result}
         >
           Scrutinize
         </button>}

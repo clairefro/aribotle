@@ -11,13 +11,14 @@
 }
 
 body {
-  width: 300px;
+  width: 350px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 18px;
 }
 
 code {
@@ -26,7 +27,7 @@ code {
 }
 
 h2 {
-  margin: 0
+  margin: 1rem 0;
 }
 
 button {
@@ -45,6 +46,11 @@ button:hover {
 
 button:disabled {
   opacity: 0.5;
+}
+
+button:disabled:hover {
+  opacity: 0.5;
+  transform: none;
 }
 
 .App {
@@ -89,9 +95,20 @@ button:disabled {
   margin-bottom: 1rem;
 }
 
-.fallacy-name:hover {
-  opacity: 0.9;
-  transition: 0.3s ease-in-out;
+.fallacy {
+  margin-bottom: 0.5rem;
+}
+
+.fallacy-name-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.fallacy-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
 }
 
 .fallacy-status-invalid {
@@ -114,6 +131,17 @@ button:disabled {
 .button-cta {
   background-color: var(--theme-accent);
   color: white;
+}
+
+.tooltip-modal {
+  position: absolute;
+  width: 200px;
+  left: -200px;
+  background-color: black;
+  padding: 0.25rem 1.5rem;
+  z-index: 10;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
 .spinner {

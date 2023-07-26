@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import icon from '../../assets/logo.png';
+import iconNeutral from '../../assets/logo.png';
+import iconAngry from '../../assets/aribotle-angry.png';
+import iconPleased from '../../assets/aribotle-pleased.png';
 import ApiKeyControls from './ApiKey/ApiKeyControls';
 import FallacyCheck from './FallacyCheck/FallacyCheck';
 import { shh } from '../../lib/shh/shh'
@@ -11,6 +13,7 @@ const { API_KEY_KEY } = constants
 const Main = () => {
   const [highlightedText, setHighlightedText] = useState("");
   const [apiKey, setApiKey] = useState(null);
+  const [mood, setMood] = useState(null)
 
   const syncStorage = async () => {
     const s = await getStorageValue(API_KEY_KEY)
@@ -40,18 +43,32 @@ const Main = () => {
     }
   }, [apiKey])
 
-
+  const iconImg = () => {
+    if (!mood) {
+      return iconNeutral
+    } else if (mood === 'angry') {
+      return iconAngry
+    } else if (mood === 'pleased') {
+      return iconPleased
+    }
+    return iconNeutral
+  }
 
   return (
     <div>
       <h1>Aribotle</h1>
-      <img src={icon} alt="extension icon" />
+      <img src={iconImg()} alt="aribotle" />
       <div>
-
-        {highlightedText?.length ? <p>"{highlightedText}"</p> : <p>Highlight text in the webpage to start</p>}
+        {highlightedText?.length ?
+          <>
+            <p>"{highlightedText}"</p>
+            <FallacyCheck apiKey={apiKey} prompt={highlightedText} setMood={setMood} />
+          </>
+          :
+          <p><em>Highlight text in the webpage and come back!</em></p>}
 
       </div>
-      <FallacyCheck apiKey={apiKey} prompt={highlightedText} />
+
       <ApiKeyControls apiKey={apiKey} setApiKey={setApiKey} />
     </div >
   )
