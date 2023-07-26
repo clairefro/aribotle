@@ -5,10 +5,17 @@ A chrome extension for detecting logical fallacies in web text
 
 
 Built with boiler: https://github.com/guocaoyi/create-chrome-ext
-<div style="display: flex; ">
-<img width="150" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/b30c393b-a2ce-4903-909c-d61d4192786f">
 
-<img width="150" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/5aa14ef2-fc38-41b6-8cdd-c07a756619b4">
+[Demo video](https://www.loom.com/share/ddf948318b5e4197815e5fbcba128d2a?sid=22a0a82a-2d7e-4361-8aef-3bbdf6ad22b7)
+
+<div style="display: flex; flex-wrap: wrap; ">
+<img width="200" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/c0c297bb-a3b5-4725-9e9b-a144ddfa1c48">
+
+<img width="200" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/e5322225-e841-416c-883b-e5ee945a121c">
+
+<img width="200" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/b30c393b-a2ce-4903-909c-d61d4192786f">
+
+<img width="200" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/5aa14ef2-fc38-41b6-8cdd-c07a756619b4">
 <div>
 
 
