@@ -27,6 +27,8 @@ In the meantime, you can run this extension locally:
 
 1. Pin Aribotle to your toolbar
 
+1. (do once) Get an OpenAI API Key from [here](https://platform.openai.com/account/api-keys) and add it in Aribotle "ApiKey Settings"
+
 ### TODO
 - [ ] Enable clearing API Key
 - [ ] Onboarding wizard for getting BYO-API Key
