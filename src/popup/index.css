@@ -1,3 +1,14 @@
+:root {
+  --theme-dark: #282c34;
+  --theme-accent: #008080;
+
+  --theme-stop: #e74c3c;
+  --theme-slow: #f1c40f;
+  --theme-go: #9ccc65;
+
+  --duration: 0.1s
+}
+
 body {
   width: 300px;
   margin: 0;
@@ -13,11 +24,33 @@ code {
     monospace;
 }
 
+h2 {
+  margin: 0
+}
+
+button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--duration) ease-in;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: all var(--duration) ease-in;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
 .App {
   text-align: center;
   height: 100%;
   padding: 10px;
-  background-color: #282c34;
+  background-color: var(--theme-dark);
   color: white;
 }
 
@@ -39,8 +72,46 @@ code {
   top: 0;
   left: 0;
   height: 100%;
-  /* animation: progress-bar-animation 1000ms linear infinite; */
 }
+
+.progress-bar-parcent-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section {
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.fallacy-name:hover {
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+}
+
+.fallacy-status-invalid {
+  color: var(--theme-slow)
+}
+
+.fallacy-status-found {
+  color: var(--theme-stop)
+}
+
+.fallacy-status-none {
+  color: var(--theme-go)
+}
+
+.api-key-controls button {
+  background-color: white;
+  border: none;
+}
+
+.button-cta {
+  background-color: var(--theme-accent);
+  color: white;
+}
+
 
 @keyframes progress-bar-animation {
   0% {

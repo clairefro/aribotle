@@ -100,87 +100,87 @@ export default [
     "description": "An argument that presents two options as the only possible choices, when in reality there are other options available."
   },
   {
-    "name": "Appeal to fear",
+    "name": "appeal to fear",
     "description": "An argument that tries to persuade the audience to accept a conclusion by appealing to their fear."
   },
   {
-    "name": "Appeal to pity",
+    "name": "appeal to pity",
     "description": "An argument that tries to persuade the audience to accept a conclusion by appealing to their pity."
   },
   {
-    "name": "Appeal to nature",
+    "name": "appeal to nature",
     "description": "An argument that tries to persuade the audience to accept a conclusion by appealing to the idea that something is natural."
   },
   {
-    "name": "Appeal to personal incredulity",
+    "name": "appeal to personal incredulity",
     "description": "An argument that tries to persuade the audience to accept a conclusion by appealing to the fact that the audience cannot imagine how something could be true."
   },
   {
-    "name": "Appeal to consequences",
+    "name": "appeal to consequences",
     "description": "An argument that tries to persuade the audience to accept a conclusion by appealing to the negative consequences that would occur if the conclusion were not accepted."
   },
   {
-    "name": "False balance",
+    "name": "false balance",
     "description": "An argument that presents two sides of an issue as being equally valid, when in reality one side is more valid than the other."
   },
   {
-    "name": "Gambler's fallacy",
+    "name": "gambler's fallacy",
     "description": "An argument that assumes that if something has happened a certain number of times, it is less likely to happen again."
   },
   {
-    "name": "Texas sharpshooter fallacy",
+    "name": "texas sharpshooter fallacy",
     "description": "An argument that cherry-picks data to support a conclusion, while ignoring data that contradicts the conclusion."
   },
   {
-    "name": "False equivalence",
+    "name": "false equivalence",
     "description": "An argument that compares two things that are not similar in all relevant respects."
   },
   {
-    "name": "Anecdotal evidence",
+    "name": "anecdotal evidence",
     "description": "An argument that relies on personal stories or experiences, rather than on evidence from a larger population."
   },
   {
-    "name": "Cherry picking",
+    "name": "cherry picking",
     "description": "An argument that selects data that supports a conclusion, while ignoring data that contradicts the conclusion."
   },
   {
-    "name": "Confirmation bias",
+    "name": "confirmation bias",
     "description": "The tendency to seek out information that confirms our existing beliefs, and to ignore information that contradicts our beliefs."
   },
   {
-    "name": "Correlation implies causation",
+    "name": "correlation implies causation",
     "description": "An argument that assumes that because two things are correlated, one causes the other."
   },
   {
-    "name": "Overgeneralization",
+    "name": "overgeneralization",
     "description": "An argument that makes a sweeping statement about a group of people or things, based on limited evidence."
   },
   {
-    "name": "False consensus",
+    "name": "false consensus",
     "description": "An argument that assumes that most people believe something, simply because the person making the argument believes it."
   },
   {
-    "name": "False authority",
+    "name": "false authority",
     "description": "An argument that cites an authority figure as evidence for a claim, even if the authority figure is not an expert on the topic."
   },
   {
-    "name": "Fallacy of the single cause",
+    "name": "fallacy of the single cause",
     "description": "An argument that assumes that there is only one cause for a particular event, when in reality there may be multiple causes."
   },
   {
-    "name": "Middle ground fallacy",
+    "name": "middle ground fallacy",
     "description": "An argument that assumes that the truth must lie somewhere between two extreme positions, even if there is no evidence to support this claim."
   },
   {
-    "name": "Nirvana fallacy",
+    "name": "nirvana fallacy",
     "description": "An argument that criticizes a proposed solution because it is not perfect, even if it is better than the current situation."
   },
   {
-    "name": "False balance fallacy",
+    "name": "false balance fallacy",
     "description": "An argument that presents two sides of an issue as being equally valid, when in reality one side is more valid than the other."
   },
   {
-    "name": "Poisoning the well",
+    "name": "poisoning the well",
     "description": "An argument that attacks the character of the person making the argument, rather than the argument itself."
   }
 ];

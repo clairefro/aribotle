@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { openaiClient } from "../../../lib/api/openai";
-import ProgressBar from "../blocks/ProgressBar/ProgressBar";
 import { isValidResponse } from "../../../lib/validation/isValidResponse";
+import BoxOfShame from "./BoxOfShame/BoxOfShame";
+
+const INVALID = "INVALID"
 
 const FallacyCheck = ({ apiKey, prompt }) => {
   const [result, setResult] = useState("")
@@ -15,7 +17,7 @@ const FallacyCheck = ({ apiKey, prompt }) => {
         const resJson = JSON.parse(res)
         setResult(resJson)
       } else {
-        setResult('INVALID')
+        setResult(INVALID)
       }
     } catch (e) {
       alert(e.message)
@@ -25,24 +27,40 @@ const FallacyCheck = ({ apiKey, prompt }) => {
     }
   }
 
+  const renderStatus = () => {
+    if (!result) return
+
+    const isInvalid = result === INVALID
+
+    if (isInvalid) {
+      return (
+        <h2 className="fallacy-status-invalid">Uh oh... I don't know</h2>
+      )
+    } else if (result.fallacy_found) {
+      return (
+        <h2 className="fallacy-status-found">FALLACY!!!!</h2>
+      )
+    }
+    return (
+      <h2 className="fallacy-status-none">No logical fallacies detected</h2>
+    )
+  }
+
   return (
     <div>
       <div>
-        {result === 'INVALID' ?
-          <p>Invalid result</p> :
-          (
-            result?.fallacy_found ? result.list.map((f, i) => (
-              <>
-                <p>{f.label}</p>
-                <ProgressBar key={i} fraction={f.score} />
-
-              </>
-            )) : null)}
+        {renderStatus()}
+        {result?.fallacy_found ?
+          <BoxOfShame list={result.list} />
+          : null
+        }
       </div>
-      {result && <textarea name="" id="" cols="30" rows="10" value={result ? JSON.stringify(result, null, 2) : ""}></textarea>}
-
-
-      <button onClick={handleClick} disabled={fetching}>{fetching ? "Wait" : "Scrutinize"}</button>
+      <button
+        className="button-cta"
+        onClick={handleClick}
+        disabled={fetching}>
+        {fetching ? "Wait" : "Scrutinize"}
+      </button>
     </div >
   )
 }

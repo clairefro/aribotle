@@ -51,8 +51,8 @@ const Main = () => {
         {highlightedText?.length ? <p>"{highlightedText}"</p> : <p>Highlight text in the webpage to start</p>}
 
       </div>
-      <ApiKeyControls apiKey={apiKey} setApiKey={setApiKey} />
       <FallacyCheck apiKey={apiKey} prompt={highlightedText} />
+      <ApiKeyControls apiKey={apiKey} setApiKey={setApiKey} />
     </div >
   )
 }
