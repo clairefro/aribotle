@@ -6,6 +6,9 @@ A chrome extension for detecting logical fallacies in web text
 
 Built with boiler: https://github.com/guocaoyi/create-chrome-ext
 
+<img width="379" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/b30c393b-a2ce-4903-909c-d61d4192786f">
+
+<img width="379" alt="image" src="https://github.com/guocaoyi/create-chrome-ext/assets/9841162/5aa14ef2-fc38-41b6-8cdd-c07a756619b4">
 ### Usage
 This chrome extension won't be published until I finish the TODO's.
 
