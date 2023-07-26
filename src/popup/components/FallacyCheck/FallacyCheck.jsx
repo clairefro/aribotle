@@ -2,6 +2,7 @@ import { useState } from "react";
 import { openaiClient } from "../../../lib/api/openai";
 import { isValidResponse } from "../../../lib/validation/isValidResponse";
 import BoxOfShame from "./BoxOfShame/BoxOfShame";
+import Spinner from "../blocks/Spinner";
 
 const INVALID = "INVALID"
 
@@ -55,12 +56,16 @@ const FallacyCheck = ({ apiKey, prompt }) => {
           : null
         }
       </div>
-      <button
-        className="button-cta"
-        onClick={handleClick}
-        disabled={fetching}>
-        {fetching ? "Wait" : "Scrutinize"}
-      </button>
+      {fetching ?
+        <Spinner /> :
+        <button
+          className="button-cta"
+          onClick={handleClick}
+          disabled={fetching}
+        >
+          Scrutinize
+        </button>}
+
     </div >
   )
 }
