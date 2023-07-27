@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { shh } from '../../../lib/shh/shh'
 import { mask } from '../../../lib/shh/mask'
 
 const ApiKeyControls = ({ setApiKey, apiKey }) => {
