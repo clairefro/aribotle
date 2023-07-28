@@ -2,7 +2,6 @@ import wisdom from './borges'
 
 class Shh {
   constructor(key) {
-    this.key = key
     this.pepper = btoa(this.key)
   }
 
